@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello_react</title>
+</head>
+<body>
+<!--    准备好一个容器-->
+<div id="test"></div>
+<!--引入核心库-->
+<script src="../js/react.development.js"></script>
+<!--引入dom操作-->
+<script src="../js/react-dom.development.js"></script>
+<!--将jsx转换为js-->
+<!--这是开发环境用，不要在线上用，不然会导致babel转换慢-->
+<script src="../js/babel.min.js"></script>
+<script></script>
+<script type="text/babel">
+    //1创建虚拟dom
+    const VDom = (
+        <h1 id="title">
+            <span>Hello,React</span>
+        </h1>
+    )//此处不要写引号，此处是jsx
+    //2渲染虚拟dom到页面
+    ReactDOM.render(VDom, document.getElementById(`test`));
+</script>
+</body>
+</html>

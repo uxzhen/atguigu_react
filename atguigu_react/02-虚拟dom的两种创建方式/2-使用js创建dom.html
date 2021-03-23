@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello_react</title>
+</head>
+<body>
+<!--    准备好一个容器-->
+<div id="test"></div>
+<!--引入核心库-->
+<script src="../js/react.development.js"></script>
+<!--引入dom操作-->
+<script src="../js/react-dom.development.js"></script>
+<script></script>
+<script type="text/javascript">
+    //1创建虚拟dom
+    const VDom = React.createElement(`h1`, {id: "title", className: "h1"}, React.createElement(`span`, { className: "h1"}, 'Hello React'))
+    //2渲染虚拟dom到页面
+    ReactDOM.render(VDom, document.getElementById(`test`));
+</script>
+</body>
+</html>

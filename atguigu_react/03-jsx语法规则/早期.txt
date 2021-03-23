@@ -1,0 +1,13 @@
+xml早期用于储存数据和传输数据
+
+<student>
+    <name/>tom<name>
+    <age/>19<age>
+</student>
+
+
+JSON格式
+"{
+    name:"tom",
+    age:19
+}"
