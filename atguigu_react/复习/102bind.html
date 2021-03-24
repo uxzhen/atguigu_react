@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function demo() {
+        console.log(this)
+    }
+
+    demo()
+    const x = demo.bind({a: 1})
+    x()
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn1">1</button>
+<button id="btn2">2</button>
+<button onclick="demo()">3</button>
+<script>
+    const btn1 = document.getElementById("btn1")
+    btn1.addEventListener("click", () => {
+        alert(1)
+    })
+
+    const btn2 = document.getElementById("btn2")
+    btn2.onclick = () => {
+        alert(2)
+    }
+
+    function demo() {
+        alert(3)
+    }
+</script>
+</body>
+</html>

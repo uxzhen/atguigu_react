@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    class Person {
+        constructor(name, age) {
+            this.name = name
+            this.age = age
+        }
+
+        speak() {
+            //speak放在了哪里？-类的原型对象上，供实例对象使用
+            // 通过person调用speak，speak中的this就是new的对象
+            console.log(this)
+        }
+
+    }
+
+    const p1 = new Person("ton", 17)
+    p1.speak()
+    const x = p1.speak
+    //类中的方法开启了严格模式
+    x()
+
+
+    function demo1() {
+        "use strict"
+        console.log(this)
+    }
+
+    demo1()
+
+
+    function demo2() {
+        console.log(this)
+    }
+
+    demo2()
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello_react</title>
+    <style>
+        .title {
+            background-color: orange;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--    准备好一个容器-->
+<div id="test"></div>
+<!--引入核心库-->
+<script src="../js/react.development.js"></script>
+<!--引入dom操作-->
+<script src="../js/react-dom.development.js"></script>
+<!--将jsx转换为js-->
+<!--这是开发环境用，不要在线上用，不然会导致babel转换慢-->
+<script src="../js/babel.min.js"></script>
+<script></script>
+<script type="text/babel">
+    /*
+    * 一定注意区分：【js语句（代码）】于【js表达式】
+    * 1表达式会产生一个值，可以放在任何一个需要值的地方
+    * （1）a
+    * （2）a+b
+    * （3）demo(1)
+    * （4）arr.map()
+    * （5）function test(){}
+    * 2语句
+    * （1）if(){}
+    * （2）for(){}
+    * （3）switch(){case}
+    * */
+    const data = [
+        "Angular", "React", "Vue"
+    ]
+    const data2 = [
+        "Angular", "React", "Vue"
+    ]
+    //1创建虚拟dom
+    const VDom = (
+        <div>
+            <h1>前端js框架列表</h1>
+            <ul>
+                {
+                    data.map((item,index) => {
+                        return <li key={index}>{item}</li>
+                    })
+                }
+            </ul>
+        </div>
+
+    )//此处不要写引号，此处是jsx
+    //2渲染虚拟dom到页面
+    ReactDOM.render(VDom, document.getElementById(`test`));
+
+</script>
+</body>
+</html>
