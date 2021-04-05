@@ -64,6 +64,26 @@
     //Student没有speak(),回去父类原型上找
     //原型链复用！
     s1.speak()
+
+    class Car {
+        constructor(name, price) {
+            this.name = name
+            this.price = price
+            this.wheel = 4
+        }
+
+        //类中可以直接写复制语句,如下代码的含义是：给car的示例添加一个属性
+        a = 1
+        price = 2
+        run = () => {
+
+        }
+    }
+
+    const c1 = new Car("奔驰c63", 199);
+    const c2 = new Car("宝马", 299);
+    console.log(c1);
+    console.log(c2)
 </script>
 </body>
 </html>

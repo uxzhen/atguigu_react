@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr1 = [1, 3, 5, 7, 9]
+    let arr2 = [2, 4, 6, 8, 10]
+    console.log(...arr1)
+    //连接数组
+    let arr3 = [...arr1, ...arr2]
+    console.log(arr3)
+
+
+    function sum(...numbers) {
+        console.log(numbers)
+        return numbers.reduce((preValue, currentValue) => {
+            return preValue + currentValue
+        })
+    }
+
+    console.log(sum(1, 2))
+
+    let per = {
+        name: 1,
+        age: 2
+    }
+    // let per2 = {...per}
+    //原生无法展开，react+ babble可以展开,但是空
+    // console.log(...per)//报错，无法直接展开对象
+    console.log({...per})//构造字面量对象展开语法，复制一个对象{...obj}
+
+    //复制同时修改
+    let per3 = {...per,name: "la"}
+    console.log(per3)
+
+</script>
